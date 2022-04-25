@@ -20,5 +20,14 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+
+Route::get("records/{id}/view", function($id){
+    $records = Records::all();
+    foreach($records as $record){
+        if($record["id"] == $id){
+            return view("records.view")->with("records",$record);
+        }
+    }
+});
 Route::apiResource("records",RecordsController::class);
 

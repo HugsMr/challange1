@@ -59,6 +59,9 @@ class RecordsController extends Controller
         return view('records.edit')->with("records", $record);
     }
 
+    public function view(Records $record){
+        return view('records.view')->with("records", $record);
+    }
     /**
      * Show the form for editing the specified resource.
      *

@@ -41,7 +41,8 @@
                             <div class="card-header d-flex justify-content-between">
                                 <span>{{ $record->title}}</span>
                                 <span class="text-right ">
-                                    <span class="d-inline-block mr-2"><a href="{{url('/api/records/'.$record->id.'')}}">Edit</a></span>
+                                    <span class="d-inline-block mr-2"><a href="{{url('/api/records/'.$record->id.'/view')}}">View</a></span>
+                                    <span class="d-inline-block mr-2"><a href="{{url('/api/records/'.$record->id)}}">Edit</a></span>
                                     <form method="POST" action="{{url('api/records/'.$record->id)}}" class="d-inline-block">
                                         {{ method_field("DELETE")}}
                                         <button type="submit" class="btn btn-primary" onclick="">Delete</button>

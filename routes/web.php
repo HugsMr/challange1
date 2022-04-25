@@ -34,6 +34,8 @@ Route::get('/search',[ RecordsController::class,"search"])->name('search');
 
 Route::get("/newest",[ RecordsController::class,"filterNewst"]);
 
+Route::get("records/{id}",[RecordsController::class,"view"]);
+
 Route::get('/create', function(){
     return view('records.create');
 });

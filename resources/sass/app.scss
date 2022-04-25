@@ -1,0 +1,28 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+.filters{
+    list-style-type: none;
+}
+.filters li{
+    display: inline-block;
+    float:left;
+    padding:5px 20px;
+    margin:0px 5px;
+    border:1px solid blue;
+}
+
+.filters li a{
+    text-decoration: none;
+}
+
+.filters li.active{
+    background-color: blue;
+}
+
+.filters li.active a{
+    color:white
+}
+
